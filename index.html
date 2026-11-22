@@ -1,1 +1,269 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>GRID 4 RACING | Mobile Racing Simulator Hire</title>
+<meta name="description" content="Experience professional racing simulators at your next event. Three racing rigs, competitive racing and mobile event hire across Belfast and Northern Ireland.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#090909;color:#fff;font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#101010;border-bottom:1px solid #292929;position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:1000;font-style:italic;letter-spacing:-1px}
+.logo span{color:#f32929}
+nav{display:flex;gap:27px;font-size:13px;font-weight:bold}
+nav a:hover{color:#ff3030}
+.btn{display:inline-block;background:#ed2525;padding:15px 25px;border-radius:4px;font-weight:900;font-size:13px;letter-spacing:1px;transition:.2s}
+.btn:hover{background:#ff4545;transform:translateY(-2px)}
+.hero{min-height:590px;display:flex;align-items:center;padding:85px 9%;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 50%,#481010 0%,#190a0a 35%,#090909 75%)}
+.hero:after{content:"";position:absolute;right:-90px;top:100px;width:440px;height:440px;border:35px solid #ffffff08;border-radius:50%;box-shadow:0 0 0 45px #ffffff05,0 0 0 90px #ffffff04}
+.hero-content{max-width:690px;position:relative;z-index:2}
+.tag{color:#ff4444;font-weight:bold;letter-spacing:4px;font-size:12px;margin-bottom:20px}
+h1{font-size:clamp(55px,9vw,100px);font-weight:1000;line-height:.91;letter-spacing:-5px;font-style:italic}
+h1 span{color:#f32b2b}
+.hero h2{font-size:23px;margin-top:25px;letter-spacing:1px}
+.hero p{color:#bbb;line-height:1.8;margin:20px 0 30px;max-width:520px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn-outline{border:1px solid #777;padding:14px 24px;border-radius:4px;font-size:13px;font-weight:bold}
+.btn-outline:hover{border-color:red}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);background:#171717;border-top:1px solid #292929;border-bottom:1px solid #292929;padding:27px 8%;text-align:center}
+.stats strong{display:block;font-size:25px;color:#f33}
+.stats small{display:block;color:#aaa;margin-top:6px;font-size:11px;letter-spacing:1px}
+section{padding:85px 8%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title .tag{margin-bottom:12px}
+.section-title h2{font-size:38px;font-style:italic;text-transform:uppercase}
+.section-title p{color:#aaa;margin-top:12px;line-height:1.7}
+.rigs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rig{background:#171717;border:1px solid #303030;border-radius:7px;overflow:hidden}
+.rig-visual{height:205px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#351010,#101010);position:relative;overflow:hidden}
+.rig-visual:before{content:"";position:absolute;width:170px;height:170px;border:18px solid #ed2929;border-radius:50%;opacity:.2}
+.rig-visual span{font-size:64px;z-index:1}
+.rig-info{padding:24px}
+.rig-info h3{font-size:20px;margin-bottom:12px}
+.rig-info p{font-size:13px;color:#aaa;line-height:1.7}
+.rig-number{color:#f33;font-size:12px;font-weight:bold;letter-spacing:2px;margin-bottom:10px}
+.features{background:#141414}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.feature{text-align:center;padding:28px 15px}
+.feature .symbol{font-size:35px;margin-bottom:18px}
+.feature h3{margin-bottom:12px}
+.feature p{color:#aaa;font-size:14px;line-height:1.7}
+.events{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.event{padding:28px;background:#171717;border-left:3px solid #ed2929;border-radius:4px}
+.event h3{margin-bottom:10px;font-size:19px}
+.event p{color:#aaa;font-size:13px;line-height:1.7}
+.booking{background:linear-gradient(135deg,#250c0c,#101010 65%)}
+.booking-wrap{max-width:760px;margin:auto}
+.booking form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+label{font-size:12px;color:#ddd;font-weight:bold}
+input,select,textarea{width:100%;background:#171717;border:1px solid #444;color:white;padding:14px;border-radius:4px;font:inherit}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:1px solid #ed2929}
+.booking button{border:0;cursor:pointer}
+.booking-note{text-align:center;color:#aaa;font-size:12px;margin-top:20px;line-height:1.7}
+footer{padding:40px 8%;background:#050505;text-align:center;border-top:1px solid #292929}
+footer .logo{margin-bottom:15px}
+footer p{color:#888;font-size:12px;line-height:1.8}
+@media(max-width:750px){
+header{padding:0 5%;height:auto;min-height:70px}
+nav{gap:12px;font-size:10px}
+.logo{font-size:20px}
+header .btn{display:none}
+.hero{min-height:550px;padding:70px 7%}
+h1{letter-spacing:-3px}
+.stats{padding:23px 3%}
+.stats strong{font-size:20px}
+section{padding:65px 6%}
+.rigs,.feature-grid{grid-template-columns:1fr}
+.events{grid-template-columns:1fr}
+.booking form{grid-template-columns:1fr}
+.field.full{grid-column:auto}
+.section-title h2{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="#" class="logo">GRID <span>4</span> RACING</a>
+<nav>
+<a href="#rigs">THE RIGS</a>
+<a href="#events">EVENTS</a>
+<a href="#booking">BOOK US</a>
+</nav>
+<a href="#booking" class="btn">BOOK NOW</a>
+</header>
+
+<main>
+<div class="hero">
+<div class="hero-content">
+<div class="tag">NORTHERN IRELAND'S MOBILE RACING EXPERIENCE</div>
+<h1>READY.<br>SET.<br><span>RACE.</span></h1>
+<h2>BRING THE RACE TRACK TO YOU.</h2>
+<p>Experience the thrill of competitive motorsport without leaving your event. Three racing simulators, full racing action and unforgettable competition. We bring the experience to you.</p>
+<div class="hero-buttons">
+<a href="#booking" class="btn">BOOK YOUR EVENT</a>
+<a href="#rigs" class="btn-outline">EXPLORE THE RIGS</a>
+</div>
+</div>
+</div>
+
+<div class="stats">
+<div><strong>03</strong><small>RACING SIMULATORS</small></div>
+<div><strong>100%</strong><small>COMPETITIVE ACTION</small></div>
+<div><strong>NI</strong><small>MOBILE EVENT HIRE</small></div>
+</div>
+
+<section id="rigs">
+<div class="section-title">
+<div class="tag">THE DRIVING EXPERIENCE</div>
+<h2>THREE RIGS. ONE BATTLE.</h2>
+<p>Three dedicated racing stations. Who's taking pole position?</p>
+</div>
+<div class="rigs">
+<div class="rig">
+<div class="rig-visual"><span>🏎️</span></div>
+<div class="rig-info">
+<div class="rig-number">RIG 01</div>
+<h3>THE GRID</h3>
+<p>Get behind the wheel, find your racing line and take on the competition.</p>
+</div>
+</div>
+<div class="rig">
+<div class="rig-visual"><span>🏁</span></div>
+<div class="rig-info">
+<div class="rig-number">RIG 02</div>
+<h3>THE CHALLENGER</h3>
+<p>Go head-to-head with friends and fight for the fastest lap.</p>
+</div>
+</div>
+<div class="rig">
+<div class="rig-visual"><span>🏆</span></div>
+<div class="rig-info">
+<div class="rig-number">RIG 03</div>
+<h3>THE CHAMPION</h3>
+<p>Every second counts. Prove yourself and claim the top spot.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="features">
+<div class="section-title">
+<div class="tag">WHY CHOOSE GRID 4 RACING?</div>
+<h2>MORE THAN A GAME.</h2>
+</div>
+<div class="feature-grid">
+<div class="feature">
+<div class="symbol">🎮</div>
+<h3>IMMERSIVE RACING</h3>
+<p>Dedicated racing cockpits, steering wheels and ultra-wide screens for an exciting driving experience.</p>
+</div>
+<div class="feature">
+<div class="symbol">🏁</div>
+<h3>REAL COMPETITION</h3>
+<p>Challenge your friends, compete for lap records and see who deserves the podium.</p>
+</div>
+<div class="feature">
+<div class="symbol">🚐</div>
+<h3>WE COME TO YOU</h3>
+<p>Our mobile racing setup brings the entertainment directly to your venue or event.</p>
+</div>
+</div>
+</section>
+
+<section id="events">
+<div class="section-title">
+<div class="tag">YOUR EVENT. OUR TRACK.</div>
+<h2>MADE FOR EVERY OCCASION.</h2>
+<p>Make your next event one to remember.</p>
+</div>
+<div class="events">
+<div class="event"><h3>🎂 Birthday Parties</h3><p>Give your guests something different. Competitive racing and entertainment for birthday celebrations.</p></div>
+<div class="event"><h3>🏢 Corporate Events</h3><p>Bring some competition to your workplace event, staff day or company celebration.</p></div>
+<div class="event"><h3>🎪 Public Events</h3><p>Add a racing attraction to your festival, community event or special occasion.</p></div>
+<div class="event"><h3>🏆 Private Hire</h3><p>Book the complete racing experience for your own private event.</p></div>
+</div>
+</section>
+
+<section class="booking" id="booking">
+<div class="booking-wrap">
+<div class="section-title">
+<div class="tag">LET'S GET YOU ON THE GRID</div>
+<h2>BOOK YOUR RACING EVENT.</h2>
+<p>Tell us about your event and we'll get back to you with availability and a quote.</p>
+</div>
+
+<form name="booking-enquiry" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="booking-enquiry">
+
+<div class="field">
+<label for="name">YOUR NAME</label>
+<input id="name" name="name" placeholder="Your name" required>
+</div>
+
+<div class="field">
+<label for="phone">PHONE NUMBER</label>
+<input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+</div>
+
+<div class="field">
+<label for="email">EMAIL ADDRESS</label>
+<input id="email" name="email" type="email" placeholder="Your email" required>
+</div>
+
+<div class="field">
+<label for="type">EVENT TYPE</label>
+<select id="type" name="event-type" required>
+<option value="">Select event</option>
+<option>Birthday party</option>
+<option>Corporate event</option>
+<option>Private hire</option>
+<option>Public event</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="field">
+<label for="date">EVENT DATE</label>
+<input id="date" name="event-date" type="date">
+</div>
+
+<div class="field">
+<label for="location">EVENT LOCATION</label>
+<input id="location" name="location" placeholder="Town or venue">
+</div>
+
+<div class="field full">
+<label for="message">TELL US ABOUT YOUR EVENT</label>
+<textarea id="message" name="message" placeholder="Expected number of guests, event details and anything else we should know..."></textarea>
+</div>
+
+<div class="field full">
+<button class="btn" type="submit">SEND BOOKING ENQUIRY →</button>
+</div>
+</form>
+<p class="booking-note">Sending an enquiry does not confirm a booking. We'll contact you to discuss availability and pricing.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="logo">GRID <span>4</span> RACING</div>
+<p>THE MOBILE RACING SIMULATOR EXPERIENCE</p>
+<p>Belfast & Northern Ireland</p>
+<p>© 2026 GRID 4 RACING. ALL RIGHTS RESERVED.</p>
+</footer>
+
+</body>
+</html>
+
