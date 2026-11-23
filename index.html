@@ -7,7 +7,59 @@
 <meta name="theme-color" content="#090909">
 <title>GRID 4 RACING | Mobile Racing Simulator Hire</title>
 <meta name="description" content="Experience professional racing simulators at your next event. Three racing rigs, competitive racing and mobile event hire across Belfast and Northern Ireland.">
+#pricing {
+    padding: 70px 7%;
+}
 
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.price-card {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.price-card.popular {
+    border: 2px solid #f32929;
+    transform: scale(1.04);
+}
+
+.price-card h3 {
+    font-size: 23px;
+    margin: 18px 0 8px;
+}
+
+.price-card .price {
+    color: #f32929;
+    font-size: 42px;
+    font-weight: 900;
+    margin: 15px 0;
+}
+
+.price-card p {
+    color: #bbb;
+    min-height: 55px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 750px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card.popular {
+        transform: none;
+    }
+}
 <style>
 .logo img {
   display: block;
